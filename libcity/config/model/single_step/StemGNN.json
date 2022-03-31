@@ -1,0 +1,22 @@
+{
+  "train": true,
+  "evaluate": true,
+  "window_size": 168,
+  "horizon": 24,
+  "epochs": 500,
+  "lr": 1e-4,
+  "multi_layer": 5,
+  "device": "cuda:0",
+  "gpu": true,
+  "gpu_id": 0,
+  "validate_freq": 1,
+  "batch_size": 32,
+  "normalize": 1,
+  "optim": "RMSProp",
+  "early_stop": true,
+  "patience": 20,
+  "exponential_decay_step": 5,
+  "decay_rate": 0.5,
+  "dropout_rate": 0.5,
+  "leakyrelu_rate": 0.2
+}

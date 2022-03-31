@@ -1,0 +1,21 @@
+{
+    "filename": "./libcity/raw_data/METR-LA/METR-LA.h5",
+    "adj_filename": "./libcity/raw_data/METR-LA/adj_mx.pkl",
+    
+    "adj_type": "distance", 
+    "//": "adj_type be  distance or connectivity",
+
+    "seq_len": 34272,
+    "num_nodes": 207,
+    "train_rate": 0.7,
+    "eval_rate": 0.2,
+
+    "input_dim": 2,
+    "output_dim": 1,
+    
+    "mask": true,
+    
+    "add_time_in_day": true,
+    "add_day_in_week": false
+  }
+  

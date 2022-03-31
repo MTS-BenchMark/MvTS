@@ -1,0 +1,11 @@
+{
+  "filename": "./libcity/raw_data/exchange_rate/exchange_rate.txt",
+  "adj_filename": "",
+  "adj_type": null,
+  "seq_len": 7588,
+  "num_nodes": 8,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+  "feature_dim": 1,
+  "mask": false
+}

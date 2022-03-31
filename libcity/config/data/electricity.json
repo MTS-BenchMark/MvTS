@@ -1,0 +1,11 @@
+{
+  "filename": "./libcity/raw_data/electricity/electricity.txt",
+  "adj_filename": "",
+  "adj_type": null,
+  "seq_len": 26304,
+  "num_nodes": 321,
+  "train_rate": 0.7,
+  "eval_rate": 0.2,
+  "feature_dim": 1,
+  "mask": false
+}

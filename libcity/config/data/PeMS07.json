@@ -1,0 +1,11 @@
+{
+  "filename": "./libcity/raw_data/PeMS07/PeMS07.csv",
+  "adj_filename": "./libcity/raw_data/PeMS07/adj_mx.pkl",
+  "adj_type": "distance",
+  "seq_len": 12672,
+  "num_nodes": 228,
+  "train_rate": 0.7,
+  "eval_rate": 0.2,
+  "feature_dim": 1,
+  "mask": true
+}

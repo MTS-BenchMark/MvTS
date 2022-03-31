@@ -1,0 +1,90 @@
+{
+    "single_step": {
+        "allowed_model": ["LSTNET", "MTGNN", "TPA_LSTM", "StemGNN"],
+        "allowed_dataset": ["electricity", "traffic", "exchange_rate", "solar-energy", "ecg", "PeMS07", "wind"],
+        "LSTNET": {
+            "dataset_class": "SingleStepDataset",
+            "executor": "SingleStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "MTGNN": {
+            "dataset_class": "MTGNNDataset",
+            "executor": "MTGNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "TPA_LSTM": {
+            "dataset_class": "SingleStepDataset",
+            "executor": "SingleStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "StemGNN": {
+            "dataset_class": "StemGNNDataset",
+            "executor": "StemGNNExecutor",
+            "evaluator": "Evaluator"
+        }
+    },
+    "multi_step": {
+        "allowed_model": ["DCRNN", "GWNET", "STSGCN", "DGCRN", "STGCN", "SCINet", "NBeats", "STFGNN", "STGNN", "CCRNN", "GTS", "AGCRN"],
+        "allowed_dataset": ["PeMS07", "METR-LA", "PEMS03", "PEMS04", "PEMS08"],
+        "DCRNN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "DCRNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "GWNET": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "GWNETExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STSGCN": {
+            "dataset_class": "STSGCNDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        }, 
+        "DGCRN": {
+            "dataset_class": "DGCRNDataset",
+            "executor": "DGCRNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STGCN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "STGCNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "SCINet": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "SCINetExecutor",
+            "evaluator": "Evaluator"
+        },
+        "NBeats": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "NBeatsExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STFGNN": {
+            "dataset_class": "STFGNNDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STGNN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "CCRNN": {
+            "dataset_class": "CCRNNDataset",
+            "executor": "CCRNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "GTS" :{
+            "dataset_class": "CCRNNDataset",
+            "executor": "CCRNNExecutor",
+            "evaluator": "Evaluator"  
+        },
+        "AGCRN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "AGCRNExecutor",
+            "evaluator": "Evaluator"
+        }
+    }
+}

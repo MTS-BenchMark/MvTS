@@ -1,0 +1,46 @@
+{
+    "device": "cuda:3",
+    "gpu": true,
+    "gpu_id": 3,
+    "save": true,
+    "cuda": true,
+  
+    "normalize": 1,
+    "window": 12,
+    "horizon": 12,
+    "batch_size": 64,
+    "mask": true,
+
+    "input_dim": 2,
+    "output_dim": 1,
+
+    "rnn_size": 64,
+    "hyperDNN_dim": 16,
+    "propalpha": 0.05,
+    "gcn_depth": 2,
+    "dropout": 0.3,
+    "subgraph_size": 20,
+    "node_dim": 40,
+    "middle_dim": 2,
+    "layers": 3,
+    "step_size1": 2500,
+    "cl_decay_steps": 2000,
+
+    "//": "whether use curriculum_learning",
+    "cl": true,
+    "train_loss": "masked_mae",
+    "clip": 10,
+    "epochs": 100,
+    "seed": 54321,
+    "log_interval": 2000,
+    "optim": "adam",
+    "lr": 0.001,
+    "L1Loss": true,
+    "patience": 20,
+    "lr_decay": false,
+    "lr_scheduler": "multisteplr",
+    "lr_decay_ratio": 0.1,
+    "lr_decay_steps": [5, 20, 40, 70],
+    "step_size": 10
+  }
+  
