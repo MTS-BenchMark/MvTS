@@ -2,7 +2,7 @@
 
 ### Introduction
 
-![](https://codimd.s3.shivering-isles.com/demo/uploads/206c2b26-a195-4bd4-9112-b7c77269c4da.png)
+![](figure/structure.png)
 
 Modeling multivariate time series has been a subject for a long time, which attracts the attention of scholars from many fields including economics, finance, traffic, etc. As the number of models increases, it's significant to design a unified framework to implement and evaluate these models. 
 
@@ -192,7 +192,7 @@ Currently, the models supported by `MvTS` are as follows, and we'll continuously
 
 It's our great honor if you are interest in `MvTS`, and any modification are welcome to contribute to the development of `MvTS`, for example, new datasets, new models and bugs, etc.... 
 
-We have created a guide to help you understand the workflow of `MvTS` and develop the library. You can read it [here](https://github.com/timeseriesAI/tsai/blob/main/CONTRIBUTING.md).
+We have created a guide to help you understand the workflow of `MvTS` and develop the library. You can read it [here](Extensibility.md).
 
 
 
