@@ -53,7 +53,7 @@ The directory of the main files participating in the process is shown as below.
 - The dataloader (`singel_step_dataset`) loads dataset `solar`, and performs normalization, segmentation and other operations, and finally is used to provide well processed data during the training process.
 - `LSTNET.py` stores the original implementation of the model `LSTNET`.
 - The executor(`single_step_executor`) completes the training and prediction process of `LSTNET`, and finally stores the well trained model at the specified location.
-- **evaluator **provides a variety of evaluation functions to evaluate the performance of the model.
+- **evaluator** provides a variety of evaluation functions to evaluate the performance of the model.
 
 ### New Datasets
 
