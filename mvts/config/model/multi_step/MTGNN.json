@@ -1,0 +1,43 @@
+{
+  "device": "cuda:0",
+  "gpu": true,
+  "gpu_id": 0,
+  "cuda": true,
+
+  "task": "multi_step",
+
+  "gcn_true": true,
+  "buildA_true": true,
+  "load_static_feature": false,
+  "cl": false,
+  "gcn_depth": 2,
+  "dropout": 0.3,
+  "subgraph_size": 20,
+  "node_dim": 40,
+  "dilation_exponential": 1,
+  "conv_channels": 32,
+  "residual_channels": 32,
+  "skip_channels": 64,
+  "end_channels": 128,
+
+  "window": 12,
+  "horizon": 12,
+  "layers": 3,
+  "batch_size": 32,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "clip": 5,
+  "step_size1":2500,
+  "step_size2": 100,
+
+  "early_stop": true,
+  "patience": 10,
+  "epochs": 100,
+  "validate_freq": 1,
+  "seed": 101,
+  "expid": 1,
+  "propalpha": 0.05,
+  "tanhalpha": 3,
+  "num_split": 1,
+  "normalize": 1
+}

@@ -1,0 +1,14 @@
+{
+  "filename": "./mvts/raw_data/pems-bay.h5",
+
+  "seq_len": 12672,
+  "num_nodes": 325,
+  "train_rate": 0.7,
+  "eval_rate": 0.1,
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "mask": true
+
+}

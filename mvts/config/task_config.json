@@ -1,0 +1,183 @@
+{
+    "single_step": {
+        "allowed_model": ["LSTNET", "TPA_LSTM", "StemGNN", "DARNN", "AdaRNN", "BHTARIMA", "MTGNN", "AutoFormer", "ESG"],
+        "allowed_dataset": ["electricity", "traffic", "exchange_rate", "solar", "ECG", "PEMS07", "wind", "weather_Dingling", "traffic_40"],
+        "LSTNET": {
+            "dataset_class": "SingleStepDataset",
+            "executor": "SingleStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "TPA_LSTM": {
+            "dataset_class": "SingleStepDataset",
+            "executor": "SingleStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "StemGNN": {
+            "dataset_class": "StemGNNDataset",
+            "executor": "StemGNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "DARNN": {
+            "dataset_class": "SingleStepDataset",
+            "executor": "DARNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "AdaRNN": {
+            "dataset_class": "AdaRNNDataset",
+            "executor": "AdaRNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "BHTARIMA": {
+            "dataset_class": "BHTARIMADataset",
+            "executor": "BHTARIMAExecutor",
+            "evaluator": "Evaluator"
+        },
+        "MTGNN": {
+            "dataset_class": "MTGNNDataset",
+            "executor": "MTGNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "AutoFormer": {
+            "dataset_class": "AutoFormerDataset",
+            "executor": "AutoFormerExecutor",
+            "evaluator": "Evaluator"            
+        }, 
+        "ESG": {
+            "dataset_class": "ESGDataset",
+            "executor": "ESGExecutor",
+            "evaluator": "Evaluator"            
+        }
+    },
+    "multi_step": {
+        "allowed_model": ["DCRNN", "GWNet", "STSGCN", "DGCRN", "STGCN", "SCINet", "NBeats",
+            "STFGNN", "STGNN", "CCRNN", "GTS", "AGCRN", "STODE", "SAAM",
+            "ASTGCN", "FCGAGA", "DeepAR", "GMAN", "Informer", "InformerStack", "MTGNN", "STNorm", "StemGNN",
+            "AutoFormer", "ESG"],
+        "allowed_dataset": ["PeMS07", "METR-LA", "PEMS03", "PEMS04", "PEMS08", "LD2011_2014", "PeMS-bay", "ETTh1", "nyc-bike"],
+        "STSGCN": {
+            "dataset_class": "STSGCNDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        }, 
+        "DGCRN": {
+            "dataset_class": "DGCRNDataset",
+            "executor": "DGCRNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STGCN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "STGCNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "SCINet": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "SCINetExecutor",
+            "evaluator": "Evaluator"
+        },
+        "NBeats": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "NBeatsExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STFGNN": {
+            "dataset_class": "STFGNNDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STGNN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        },
+        "CCRNN": {
+            "dataset_class": "CCRNNDataset",
+            "executor": "CCRNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "GTS" :{
+            "dataset_class": "CCRNNDataset",
+            "executor": "CCRNNExecutor",
+            "evaluator": "Evaluator"  
+        },
+        "AGCRN": {
+            "dataset_class": "MultiStepDataset",
+            "executor": "AGCRNExecutor",
+            "evaluator": "Evaluator"
+        }, 
+        "STODE": {
+            "dataset_class": "STODEDataset",
+            "executor": "MultiStepExecutor",
+            "evaluator": "Evaluator"
+        }, 
+        "AutoFormer": {
+            "dataset_class": "AutoFormerDataset",
+            "executor": "AutoFormerExecutor",
+            "evaluator": "Evaluator"
+        },
+        "SAAM": {
+            "dataset_class": "SAAMDataset",
+            "executor": "SAAMExecutor",
+            "evaluator": "Evaluator"
+        },
+        "DCRNN": {
+            "dataset_class": "DCRNNDataset",
+            "executor": "DCRNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "GWNet": {
+            "dataset_class": "DCRNNDataset",
+            "executor": "GWNetExecutor",
+            "evaluator": "Evaluator"
+        },
+        "ASTGCN": {
+            "dataset_class": "ASTGCNDataset",
+            "executor": "ASTGCNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "FCGAGA": {
+            "dataset_class": "FCGAGADataset",
+            "executor": "FCGAGAExecutor",
+            "evaluator": "Evaluator"
+        },
+        "DeepAR": {
+            "dataset_class": "DeepARDataset",
+            "executor": "DeepARExecutor",
+            "evaluator": "Evaluator"
+        },
+        "GMAN": {
+            "dataset_class": "GMANDataset",
+            "executor": "GMANExecutor",
+            "evaluator": "Evaluator"
+        },
+        "Informer": {
+            "dataset_class": "InformerDataset",
+            "executor": "InformerExecutor",
+            "evaluator": "Evaluator"
+        },
+        "InformerStack": {
+            "dataset_class": "InformerDataset",
+            "executor": "InformerExecutor",
+            "evaluator": "Evaluator"
+        },
+        "MTGNN": {
+            "dataset_class": "MTGNNDataset",
+            "executor": "MTGNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "STNorm": {
+            "dataset_class": "STNormDataset",
+            "executor": "STNormExecutor",
+            "evaluator": "Evaluator"
+        },
+        "StemGNN": {
+            "dataset_class": "StemGNNDataset",
+            "executor": "StemGNNExecutor",
+            "evaluator": "Evaluator"
+        },
+        "ESG": {
+            "dataset_class": "ESGDataset",
+            "executor": "ESGExecutor",
+            "evaluator": "Evaluator"            
+        }
+    }
+}

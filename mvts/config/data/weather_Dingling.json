@@ -1,0 +1,11 @@
+{
+  "filename": "./mvts/raw_data/weather_Dingling.h5",
+
+  "input_dim": 6,
+  "output_dim": 6,
+
+  "seq_len": 1460,
+  "num_nodes": 24,
+
+  "mask": false
+}

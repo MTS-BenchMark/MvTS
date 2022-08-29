@@ -1,0 +1,59 @@
+{
+    "device": "cuda:1",
+    "gpu": true,
+    "gpu_id": 1,
+    "save": true,
+    "cuda": true,
+  
+    "normalize": 1,
+    "window": 12,
+    "label_len": 6,
+    "horizon": 12,
+    "pred_days": 7,
+    "v_partition": 0.1,
+
+    "batch_size": 32,
+    "timeList_gene": {
+      "unit": "h",
+      "origin": "2018-01-01",
+      "time_step": 1
+    },
+    "//this is notes for timeList gene" : {
+      "unit": "the time unit. d: daily; h: hour; m: minute; s:second; ms,us, ns...",
+      "origin": "the base-time for gene",
+      "time_step": "the Length of each time hop"
+    },
+    
+
+    "input_size": 5, 
+    "train_ins_num": 50000,
+    "n_head": 8,
+    "num_layers": 3, 
+    "embedded_dim": 20,
+    "embd_pdrop": 0.1,
+    "attn_pdrop": 0.1,
+    "resid_pdrop": 0.1,
+    "overlap": false,
+    "scale_att": false,
+    "sparse": false,
+    "enc_len": 168,
+    "dec_len": 24,
+    "acc_steps": 1,
+    "q_len": 1,
+    "pred_samples": 200,
+    "sub_len": 1,
+
+    "clip": 10,
+    "epochs": 1,
+    "seed": 54321,
+    "log_interval": 2000,
+    "optim": "adam",
+    "lr": 0.001,
+    "patience": 30,
+    "lr_decay": false,
+    "lr_scheduler": "multisteplr",
+    "lr_decay_ratio": 0.1,
+    "lr_decay_steps": [5, 20, 40, 70],
+    "step_size": 10
+  }
+  

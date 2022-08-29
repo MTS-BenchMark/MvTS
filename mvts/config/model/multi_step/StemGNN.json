@@ -1,0 +1,26 @@
+{
+  "device": "cuda:0",
+  "gpu": true,
+  "gpu_id": 0,
+
+  "train": true,
+  "evaluate": true,
+  "window_size": 12,
+
+  "task": "multi_step",
+
+  "horizon": 12,
+  "epochs": 500,
+  "lr": 1e-3,
+  "multi_layer": 5,
+  "validate_freq": 1,
+  "batch_size": 128,
+  "normalize": 7,
+  "optim": "RMSProp",
+  "early_stop": true,
+  "patience": 20,
+  "exponential_decay_step": 5,
+  "decay_rate": 0.7,
+  "dropout_rate": 0.5,
+  "leakyrelu_rate": 0.2
+}

@@ -1,0 +1,13 @@
+{
+  "filename": "./mvts/raw_data/electricity.h5",
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "seq_len": 26304,
+  "num_nodes": 321,
+  "train_rate": 0.7,
+  "eval_rate": 0.1,
+
+  "mask": false
+}

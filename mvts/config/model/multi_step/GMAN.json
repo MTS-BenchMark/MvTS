@@ -1,0 +1,29 @@
+{
+  "device": "cuda:3",
+  "gpu": true,
+  "gpu_id": 3,
+  "cuda": true,
+
+  "task": "multi_step",
+
+  "se_file":"./mvts/raw_data/PeMS-bay/SE(PeMS).txt",
+
+  "time_slot": 5,
+  "window_size": 12,
+  "horizon": 12,
+  "L": 3,
+  "K": 8,
+  "d": 8,
+  "bn_decay": 0.1,
+  "batch_size": 8,
+  "epochs": 1000,
+  "patience": 1000,
+  "learning_rate": 0.001,
+  "decay_epoch": 100,
+  "early_stop": false,
+  "normalize": 1,
+  "validate_freq": 1,
+  "optim": "adam",
+  "weight_decay": 0.001,
+  "lr_decay_ratio": 0.8
+}

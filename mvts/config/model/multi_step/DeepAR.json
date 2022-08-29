@@ -1,0 +1,35 @@
+{
+  "device": "cuda:0",
+  "gpu": true,
+  "gpu_id": 0,
+  "cuda": true,
+
+  "task": "multi_step",
+
+  "normalize": 0,
+  "window_size": 192,
+  "stride_size": 24,
+  "num_covariates": 4,
+  "pred_days": 7,
+  "given_days": 7,
+  "relative_metrics": false,
+  "sampling": false,
+
+  "learning_rate": 1e-3,
+  "batch_size": 4096,
+  "lstm_layers": 3,
+  "epochs": 100,
+  "train_window": 192,
+  "test_window": 192,
+  "predict_start": 168,
+  "test_predict_start": 168,
+  "predict_steps": 24,
+  "cov_dim": 4,
+  "lstm_hidden_dim": 40,
+  "embedding_dim": 20,
+  "sample_times": 200,
+  "lstm_dropout": 0.1,
+  "predict_batch": 256,
+  "patience": 10,
+  "early_stop": true
+}

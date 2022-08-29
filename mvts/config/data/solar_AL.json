@@ -1,0 +1,14 @@
+{
+  "filename": "./mvts/raw_data/solar.h5",
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "seq_len": 52560,
+  "num_nodes": 137,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+
+  "mask": false
+
+}

@@ -1,0 +1,13 @@
+{
+  "filename": "./mvts/raw_data/LD2011_2014.h5",
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "seq_len": 140256,
+  "num_nodes": 370,
+  "train_rate": 0.9,
+  "eval_rate": 0.1,
+
+  "mask": true
+}

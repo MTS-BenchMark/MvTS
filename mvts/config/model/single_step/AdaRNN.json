@@ -1,0 +1,38 @@
+{
+  "device": "cuda:3",
+  "gpu": true,
+  "gpu_id": 3,
+  "cuda": true,
+
+  "task": "single_step",
+
+  "model_name": "AdaRNN",
+  "data_mode": "tdc",
+
+  "train_start_time": "2013-3-1 0:0",
+  "train_end_time": "2016-10-30 23:0",
+  "valid_start_time": "2016-7-2 0:0",
+  "valid_end_time": "2016-10-30 23:0",
+  "test_start_time": "2016-11-2 0:0",
+  "test_end_time": "2017-2-28 23:0",
+
+  "d_feat": 6,
+  "hidden_size": 64,
+  "num_layers": 2,
+  "dropout": 0.0,
+  "class_num": 1,
+  "pre_epoch": 20,
+  "epochs": 200,
+  "batch_size": 36,
+  "learning_rate": 5e-3,
+  "patience": 40,
+  "early_stop": true,
+  "smooth_steps": 5,
+  "dw": 0.05,
+  "loss_type": "cosine",
+  "number_domain": 10,
+  "len_seq": 24,
+  "seed": 10,
+  "len_win":0,
+  "validate_freq": 1
+}

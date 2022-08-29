@@ -1,0 +1,33 @@
+{
+    "device": "cuda:0",
+    "gpu": true,
+    "gpu_id": 0,
+    "save": true,
+    "cuda": true,
+  
+    "normalize": 1,
+    "window": 12,
+    "horizon": 12,
+    "batch_size": 128,
+    "mask": false,
+
+    "nb_blocks_per_stack": 2, 
+    "share_weights_in_stack": true,
+    "hidden_layer_units": 64,
+
+    "train_loss": "mae",
+    "clip": 10,
+    "epochs": 50,
+    "seed": 54321,
+    "log_interval": 2000,
+    "optim": "adam",
+    "lr": 0.001,
+    "L1Loss": true,
+    "patience": 20,
+    "lr_decay": false,
+    "lr_scheduler": "multisteplr",
+    "lr_decay_ratio": 0.1,
+    "lr_decay_steps": [5, 20, 40, 70],
+    "step_size": 10
+  }
+  

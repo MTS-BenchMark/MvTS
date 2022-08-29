@@ -1,0 +1,13 @@
+{
+  "filename": "./mvts/raw_data/ETTm2.h5",
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "seq_len": 69680,
+  "num_nodes": 7,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+
+  "mask": false
+}

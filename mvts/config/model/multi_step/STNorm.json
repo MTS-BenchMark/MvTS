@@ -1,0 +1,30 @@
+{
+  "device": "cuda:1",
+  "gpu": true,
+  "gpu_id": 1,
+  "cuda": true,
+
+  "task": "multi_step",
+
+  "n_slots": 24,
+  "horizon": 3,
+  "window_size": 16,
+  "kernel_size":2,
+  "blocks": 1,
+  "version": 0,
+  "model": "wavenet",
+  "normalize": 1,
+  "snorm": 1,
+  "tnorm": 1,
+  "n_layers": 4,
+  "hidden_channels": 16,
+  "in_dim": 1,
+  "batch_size": 8,
+  "epochs": 1000,
+  "learning_rate": 0.0001,
+  "patience": 10,
+  "validate_freq": 10,
+  "max_grad_norm": 10,
+  "early_stop": true,
+  "mask": false
+}

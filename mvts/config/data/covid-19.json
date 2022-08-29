@@ -1,0 +1,13 @@
+{
+  "filename": "./mvts/raw_data/covid-19.h5",
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "seq_len": 816,
+  "num_nodes": 284,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+  "mask": true
+
+}

@@ -1,0 +1,14 @@
+{
+  "p": 3,
+  "d": 2,
+  "q": 1,
+  "taus": [228, 5],
+  "Rs": [5, 5],
+  "K": 10,
+  "tol": 0.001,
+  "Us_mode": 4,
+  "verbose": 0,
+  "convergence_loss": false,
+
+  "task":  "single_step"
+}

@@ -1,0 +1,13 @@
+{
+  "filename": "./mvts/raw_data/PEMS08.h5",
+
+  "input_dim": 3,
+  "output_dim": 3,
+
+  "seq_len": 17856,
+  "num_nodes": 170,
+  "train_rate": 0.7,
+  "eval_rate": 0.1,
+
+  "mask": true
+}

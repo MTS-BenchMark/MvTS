@@ -1,0 +1,14 @@
+{
+  "filename": "./mvts/raw_data/nyc-taxi.h5",
+
+  "input_dim": 2,
+  "output_dim": 2,
+
+  "seq_len": 4368,
+  "num_nodes": 266,
+  "train_rate": 0.7,
+  "eval_rate": 0.1,
+
+  "mask": false
+
+}

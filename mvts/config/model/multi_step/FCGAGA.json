@@ -1,0 +1,29 @@
+{
+  "device": "cuda:0",
+  "gpu": true,
+  "gpu_id": 0,
+  "cuda": true,
+
+  "task": "multi_step",
+
+  "normalize": 1,
+  "epochs": 60,
+  "steps_per_epoch": 800,
+  "block_layers": 3,
+  "hidden_units": 128,
+  "blocks": 2,
+  "horizon": 12,
+  "window_size": 12,
+  "base_lr": 1e-3,
+  "decay_steps": 3,
+  "decay_rate": 0.5,
+  "batch_size": 32,
+  "weight_decay": 1e-5,
+  "node_id_dim": 64,
+  "num_stacks": 3,
+  "epsilon": 1e-4,
+  "validate_freq": 1,
+  "early_stop": true,
+  "patience ": 10,
+  "mask": true
+}

@@ -1,0 +1,13 @@
+{
+  "filename": "./mvts/raw_data/weather.h5",
+
+  "input_dim": 1,
+  "output_dim": 1,
+
+  "seq_len": 25696,
+  "num_nodes": 21,
+  "train_rate": 0.6,
+  "eval_rate": 0.2,
+
+  "mask": false
+}
