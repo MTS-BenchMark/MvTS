@@ -27,6 +27,7 @@ The time series with $N$ variables is denoted as $X = \{ {X}^{(1)}, {X}^{(2)},..
 ##### Single_Step
 
 The goal of single-step forecasting is to obtain the future value ${X}^{(t+Q)}$ at time step $Q$ through a learned mapping function $\mathcal{F}_1$.
+
 $$
 \quad  {X}^{(t-P+1:t)} \xrightarrow{\mathcal{F}_1} {X}^{(t+Q)}
 $$
@@ -34,6 +35,7 @@ $$
 ##### Multi_Step
 
 The goal of multi-step forecasting is to predict a sequence of future values ${X}^{(t+1:t+Q)}$ through a learned mapping function $\mathcal{F}_2$.
+
 $$
 {X}^{(t-P+1:t)} \xrightarrow{\mathcal{F}_2} {X}^{(t+1:t+Q)}
 $$
