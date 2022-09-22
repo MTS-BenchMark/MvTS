@@ -13,8 +13,6 @@ We believe `MvTS` will contribute to the research of **Multivariate Time Series*
 
 ### Requirements
 
-
-
 ### Usage
 
 #### Definition
