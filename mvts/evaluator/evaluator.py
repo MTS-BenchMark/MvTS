@@ -193,7 +193,7 @@ def stnorm_mape(preds, labels):
     greater_than_20 = labels > 20
     labels = labels[greater_than_20]
     preds = preds[greater_than_20]
-    return np.mean(np.abs(preds - labels) / (labels))
+    return np.mean(np.abs(preds - labels) / (labels)) * 100
 
 class Evaluator(AbstractEvaluator):
     def __init__(self, config):
@@ -236,6 +236,7 @@ class Evaluator(AbstractEvaluator):
                     scores['MAPE'][f'horizon-{step}'] = masked_mape_np(y_pred, y_true, null_val=0)
                     scores['MAPE1'][f'horizon-{step}'] = mape_np(y_pred, y_true)
                     scores['node_wise_PCC'][f'horizon-{step}']= node_pcc_np(y_pred, y_true)
+                    scores['STNorm_MAPE'][f'horizon-{step}'] = stnorm_mape(y_pred, y_true)
                     # scores['PCC'][f'horizon-{step}'] = pcc_np(y_pred, y_true)
                     # scores['StemGNN_MAPE'][f'horizon-{step}'] = stemgnn_mape(y_pred, y_true) * 100.0
                     # scores['CORR'][f'horizon-{step}'] = corr_np(y_pred, y_true)
@@ -262,7 +263,7 @@ class Evaluator(AbstractEvaluator):
                     scores['RMSE'][f'horizon-{step}'] = rmse_np(y_pred, y_true)
                     # scores['MAPE'][f'horizon-{step}'] = mape_np(y_pred,y_true) * 100.0
                     scores['MAPE'][f'horizon-{step}'] = masked_mape_np(y_pred, y_true, null_val=0)
-                    # scores['STNorm_MAPE'][f'horizon-{step}'] = stnorm_mape(y_pred, y_true) * 100.0
+                    scores['STNorm_MAPE'][f'horizon-{step}'] = stnorm_mape(y_pred, y_true)
                     # scores['StemGNN_MAPE'][f'horizon-{step}'] = stemgnn_mape(y_pred, y_true) * 100.0
                     # scores['PCC'][f'horizon-{step}'] = pcc_np(y_pred, y_true)
                     scores['node_wise_PCC'][f'horizon-{step}']= node_pcc_np(y_pred, y_true)

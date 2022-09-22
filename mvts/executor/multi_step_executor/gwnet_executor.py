@@ -13,7 +13,6 @@ from torch.utils.tensorboard import SummaryWriter
 from mvts.executor.abstract_executor import AbstractExecutor
 from mvts.utils import get_evaluator, ensure_dir, Optim
 from mvts.executor.utils import get_train_loss
-# from mvts.model.loss import masked_mae_np, masked_mape_np, masked_rmse_np, masked_mae
 
 
 class GWNetExecutor(AbstractExecutor):
@@ -139,9 +138,9 @@ class GWNetExecutor(AbstractExecutor):
         message = []
         prediction_length = preds.shape[1]
         for i in range(prediction_length):
-            mae = escore['masked_MAE'][f'horizon-{i}']
-            rmse = escore['masked_RMSE'][f'horizon-{i}']
-            mape = escore['masked_MAPE'][f'horizon-{i}']
+            mae = escore['MAE'][f'horizon-{i}']
+            rmse = escore['RMSE'][f'horizon-{i}']
+            mape = escore['MAPE'][f'horizon-{i}']
             message.append("MAE: {:.4f}, MAPE: {:.4f}, RMSE: {:.4f}".format(mae, mape, rmse))
         post_fix = {
             "type": type,

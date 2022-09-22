@@ -262,7 +262,7 @@ class InformerExecutor(AbstractExecutor):
             mae = escore['MAE']['all']
             mse = (escore['RMSE']['all'])**2
             rmse = escore['RMSE']['all']
-            mape = escore['masked_MAPE']['all']
+            mape = escore['MAPE']['all']
             mspe = escore['MSPE']['all']
             self._logger.info('mse:{}, mae:{}'.format(mse, mae))
 

@@ -249,7 +249,7 @@ class ASTGCNExecutor(AbstractExecutor):
             for i in range(prediction_length):
                 mae = escore['MAE'][f'horizon-{i}']
                 rmse = escore['RMSE'][f'horizon-{i}']
-                mape = escore['masked_MAPE'][f'horizon-{i}']
+                mape = escore['MAPE'][f'horizon-{i}']
                 pcc = escore['PCC'][f'horizon-{i}']
                 message.append("MAE: {:.4f}, MAPE: {:.4f}, RMSE: {:.4f}， PCC: {:.4f}".format(mae, mape, rmse, pcc))
 

@@ -103,11 +103,9 @@ class STGCNExecutor(MultiStepExecutor):
                 output = output.permute(1, 0, 2)
                 score = self.evaluator.evaluate(self.scaler.inverse_transform(output), \
                     self.scaler.inverse_transform(valy))
-                if self.mask:
-                    vloss = score["masked_MAE"]["all"]
-                else:
-                    vloss = score["MAE"]["all"]
-                    
+
+                vloss = score["MAE"]["all"]
+
                 valid_loss.append(vloss)
             
 

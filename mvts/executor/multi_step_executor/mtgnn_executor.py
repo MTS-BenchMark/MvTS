@@ -52,9 +52,6 @@ def corr_np(preds, labels):
     return correlation
 
 def metric(pred, real):
-    # mae = masked_mae(pred,real,0.0).item()
-    # mape = masked_mape(pred,real,0.0).item()
-    # rmse = masked_rmse(pred,real,0.0).item()
     mae = mae_np(pred, real)
     mape = mape_np(pred, real)
     rmse = rmse_np(pred, real)
@@ -243,17 +240,17 @@ class MTGNNExecutor(AbstractExecutor):
             prediction_length = y_preds.shape[1]
             assert prediction_length == self.horizon
             for i in range(prediction_length):
-                mae = escore['masked_MAE'][f'horizon-{i}']
-                rmse = escore['masked_RMSE'][f'horizon-{i}']
-                mape = escore['masked_MAPE'][f'horizon-{i}']
+                mae = escore['MAE'][f'horizon-{i}']
+                rmse = escore['RMSE'][f'horizon-{i}']
+                mape = escore['MAPE'][f'horizon-{i}']
                 corr = escore['CORR'][f'horizon-{i}']
                 log = 'Evaluate on test data for horizon {:d}, Test MAE: {:.4f}, Test MAPE: {:.4f}, Test RMSE: {:.4f}, Test CORR: {:.4f}'
                 if type == "test":
                     self._logger.info(log.format(i + 1, mae, mape, rmse, corr))
                 message.append("MAE: {:.4f}, MAPE: {:.4f}, RMSE: {:.4f}， CORR: {:.4f}".format(mae, mape, rmse, corr))
-            maeAll = escore['masked_MAE']['all']
-            rmseAll = escore['masked_RMSE']['all']
-            mapeAll = escore['masked_MAPE']['all']
+            maeAll = escore['MAE']['all']
+            rmseAll = escore['RMSE']['all']
+            mapeAll = escore['MAPE']['all']
             corrAll = escore['CORR']['all']
             log = 'Evaluate on test data for horizon all, Test MAE: {:.4f}, Test MAPE: {:.4f}, Test RMSE: {:.4f}, Test CORR: {:.4f}'
             if type == "test":

@@ -189,9 +189,9 @@ class FCGAGAExecutor(AbstractExecutor):
         message = []
         prediction_length = preds.shape[1]
         for i in range(prediction_length):
-            mae = escore['masked_MAE'][f'horizon-{i}']
-            rmse = escore['masked_RMSE'][f'horizon-{i}']
-            mape = escore['masked_MAPE'][f'horizon-{i}']
+            mae = escore['MAE'][f'horizon-{i}']
+            rmse = escore['RMSE'][f'horizon-{i}']
+            mape = escore['MAPE'][f'horizon-{i}']
             message.append("MAE: {:.4f}, MAPE: {:.4f}, RMSE: {:.4f}".format(mae, mape, rmse))
         post_fix = {
             "type": type,

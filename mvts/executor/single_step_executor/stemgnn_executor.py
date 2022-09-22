@@ -192,7 +192,7 @@ class StemGNNExecutor(AbstractExecutor):
                 truths = scaler.inverse_transform(truths)
 
             score = self.evaluator.evaluate(preds, truths)
-            mape, mae, rmse = score['masked_MAPE']['all'], score['MAE']['all'], score['RMSE']['all']
+            mape, mae, rmse = score['MAPE']['all'], score['MAE']['all'], score['RMSE']['all']
             self._logger.info(f'MAPE {mape:7.9}; MAE {mae:7.9f}; RMSE {rmse:7.9f}.')
             return dict(mae=mae, mape=mape, rmse=rmse), score
         #TODO

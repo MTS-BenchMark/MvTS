@@ -175,7 +175,7 @@ class StemGNNExecutor(AbstractExecutor):
         forecast = forecast[:, :, :, None]
         target = target[:, :, :, None]
         score = self.evaluator.evaluate(forecast, target)
-        mape, mae, rmse = score['masked_MAPE']['all'], score['masked_MAE']['all'], score['masked_RMSE']['all']
+        mape, mae, rmse = score['MAPE']['all'], score['MAE']['all'], score['RMSE']['all']
         self._logger.info(f'MAPE {mape:7.9}; MAE {mae:7.9f}; RMSE {rmse:7.9f}.')
         return dict(mae=mae, mape=mape, rmse=rmse)
 
