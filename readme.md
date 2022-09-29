@@ -98,31 +98,33 @@ time = pd.to_datetime(time)
 
 The following are the information of datasets supported by `MvTS`. Users can download the datasets from [Google Drive](https://drive.google.com/drive/folders/1FjazvrQbesEMGdPIUmTDNrCrWDkhKlf6?usp=sharing) or [Baidu Yun](https://pan.baidu.com/s/1gArw_hGmoDldtaO9X0itKw?pwd=ifuv).
 
-|   Datasets    | Nodes | TimeSteps | Granularity | StartTime  |
-| :-----------: | :---: | :-------: | :---------: | :--------: |
-| AirAualityUCI |  12   |   9357    |    1hour    | 03/10/3004 |
-|   covid-19    |  284  |    816    |    1day     | 01/22/2020 |
-|      ECG      |  140  |   5000    |      -      |     -      |
-|  electricity  |  321  |   26304   |    1hour    | 07/01/2016 |
-|     ETTh1     |   7   |   17420   |    1hour    | 07/01/2016 |
-|     ETTh2     |   7   |   17420   |    1hour    | 07/01/2016 |
-|     ETTm1     |   7   |   69680   |    15min    | 07/01/2016 |
-|     ETTm2     |   7   |   69680   |    15min    | 07/01/2016 |
-| exchange-rate |   8   |   7588    |    1day     | 01/01/1990 |
-|    illness    |   7   |    966    |    7day     | 01/01/2002 |
-|    metr-la    |  207  |   34272   |    5min     | 03/01/2012 |
-|   nyc-bike    |  250  |   4368    |    30min    | 04/01/2016 |
-|   nyc-taxi    |  266  |   4368    |    30min    | 04/01/2016 |
-|   pems-bay    |  325  |   52116   |    5min     | 01/01/2017 |
-|    PEMS03     |  358  |   26208   |    5min     | 05/01/2012 |
-|    PEMS04     |  307  |   16992   |    5min     | 07/01/2017 |
-|    PEMS07     |  883  |   28224   |    5min     | 05/01/2017 |
-|    PEMS08     |  170  |   17856   |    5min     | 07/01/2016 |
-|     solar     |  137  |   52560   |    10min    | 01/01/2006 |
-|    traffic    |  862  |   17544   |    1hour    | 07/01/2016 |
-|    weather    |  21   |   52696   |    10min    | 01/01/2020 |
-|      WTH      |  12   |   35064   |    1hour    | 01/01/2010 |
-|     wind      |  28   |   10957   |    1day     | 01/01/1986 |
+Click [here](https://drive.google.com/drive/folders/1YatrRANAQrHhRYeEd0UhMMiYrAoJlbWE?usp=sharing) to get the original data which is unprocessed.
+
+|   Datasets    | Nodes | TimeSteps | Granularity |  StartTime  |
+| :-----------: | :---: | :-------: | :---------: | :---------: |
+| AirAualityUCI |  12   |   9357    |    1hour    | x03/10/3004 |
+|   covid-19    |  284  |    816    |    1day     | 01/22/2020  |
+|      ECG      |  140  |   5000    |      -      |      -      |
+|  electricity  |  321  |   26304   |    1hour    | 07/01/2016  |
+|     ETTh1     |   7   |   17420   |    1hour    | 07/01/2016  |
+|     ETTh2     |   7   |   17420   |    1hour    | 07/01/2016  |
+|     ETTm1     |   7   |   69680   |    15min    | 07/01/2016  |
+|     ETTm2     |   7   |   69680   |    15min    | 07/01/2016  |
+| exchange-rate |   8   |   7588    |    1day     | 01/01/1990  |
+|    illness    |   7   |    966    |    7day     | 01/01/2002  |
+|    metr-la    |  207  |   34272   |    5min     | 03/01/2012  |
+|   nyc-bike    |  250  |   4368    |    30min    | 04/01/2016  |
+|   nyc-taxi    |  266  |   4368    |    30min    | 04/01/2016  |
+|   pems-bay    |  325  |   52116   |    5min     | 01/01/2017  |
+|    PEMS03     |  358  |   26208   |    5min     | 05/01/2012  |
+|    PEMS04     |  307  |   16992   |    5min     | 07/01/2017  |
+|    PEMS07     |  883  |   28224   |    5min     | 05/01/2017  |
+|    PEMS08     |  170  |   17856   |    5min     | 07/01/2016  |
+|     solar     |  137  |   52560   |    10min    | 01/01/2006  |
+|    traffic    |  862  |   17544   |    1hour    | 07/01/2016  |
+|    weather    |  21   |   52696   |    10min    | 01/01/2020  |
+|      WTH      |  12   |   35064   |    1hour    | 01/01/2010  |
+|     wind      |  28   |   10957   |    1day     | 01/01/1986  |
 
 If you want to develop new dataset into `MvTS`,  you need to organize the new dataset in the same format and store it in h5 file.  Among them, the processing of **time** information can refer to the following method. (To be convenient, we use the common used *csv* file for an example.)
 
