@@ -44,7 +44,9 @@ class StockBlockLayer(nn.Module):
     def spe_seq_cell(self, input):
         batch_size, k, input_channel, node_cnt, time_step = input.size()
         input = input.view(batch_size, -1, node_cnt, time_step)
-        ffted = torch.rfft(input, 1, onesided=False)
+        # ffted = torch.rfft(input, 1, onesided=False)
+        ffted = torch.fft.fft(input)
+        ffted = torch.stack((ffted.real, ffted.imag), -1)
         real = ffted[..., 0].permute(0, 2, 1, 3).contiguous().reshape(batch_size, node_cnt, -1)
         img = ffted[..., 1].permute(0, 2, 1, 3).contiguous().reshape(batch_size, node_cnt, -1)
         for i in range(3):
@@ -52,9 +54,12 @@ class StockBlockLayer(nn.Module):
             img = self.GLUs[2 * i + 1](img)
         real = real.reshape(batch_size, node_cnt, 4, -1).permute(0, 2, 1, 3).contiguous()
         img = img.reshape(batch_size, node_cnt, 4, -1).permute(0, 2, 1, 3).contiguous()
-        time_step_as_inner = torch.cat([real.unsqueeze(-1), img.unsqueeze(-1)], dim=-1)
-        iffted = torch.irfft(time_step_as_inner, 1, onesided=False)
-        return iffted
+        # time_step_as_inner = torch.cat([real.unsqueeze(-1), img.unsqueeze(-1)], dim=-1)
+        time_step_as_inner = torch.complex(real, img)
+        # iffted = torch.irfft(time_step_as_inner, 1, onesided=False)
+        iffted = torch.fft.ifft(time_step_as_inner)
+
+        return iffted.to(torch.float32)
 
     def forward(self, x, mul_L):
         mul_L = mul_L.unsqueeze(1)

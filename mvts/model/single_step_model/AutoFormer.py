@@ -130,12 +130,14 @@ class DataEmbedding_wo_pos(nn.Module):
         self.dropout = nn.Dropout(p=dropout)
 
     def forward(self, x, x_mark):
-        # print("(((((((((((((((((((((")
-        # print(x.shape)
-        # print(x_mark.shape)
-        # print("_______________________")
-        # print(self.value_embedding(x).shape)
-        # print(self.temporal_embedding(x_mark).shape)
+        print("(((((((((((((((((((((")
+        print(x.shape)
+        print(x_mark.shape)
+        print("_______________________")
+        print(self.value_embedding(x).shape)
+        print(self.temporal_embedding(x_mark).shape)
+
+        
         x = self.value_embedding(x) + self.temporal_embedding(x_mark)
         return self.dropout(x)
 ######################################################################################################################
@@ -492,7 +494,7 @@ class AutoFormer(nn.Module):
 
         self.seq_len = self.config.get("window", 168)
         self.label_len = self.config.get("label_len", 1)
-        self.pred_len = self.config.get("horizon", 1)
+        self.pred_len = self.config.get("pred_len", 1)
         self.output_attention = self.config.get("output_attention", False)
 
         # Decomp

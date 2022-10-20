@@ -1,7 +1,7 @@
 {
-  "device": "cuda:1",
+  "device": "cuda:0",
   "gpu": true,
-  "gpu_id": 1,
+  "gpu_id": 0,
 
   "task": "single_step",
 

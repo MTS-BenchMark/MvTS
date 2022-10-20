@@ -174,7 +174,7 @@ class AutoFormerDataset(AbstractDataset):
             df_stamp['hour'] = df_stamp.date.apply(lambda row: row.hour, 1)
             data_stamp = df_stamp.drop(['date'], 1).values
         elif self.timeenc == 1:
-            data_stamp = time_features(pd.to_datetime(df_stamp['date'].values), freq=self.freq)
+            data_stamp = time_features(pd.to_datetime(df_stamp['date']   .values), freq=self.freq)
             data_stamp = data_stamp.transpose(1, 0)
 
         return data_stamp
