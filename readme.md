@@ -165,11 +165,11 @@ def geneTimeList(self):
     for i in range(self.seq_len): #序列长度
         time.append(i * self.timeList_gene["time_step"]) #parameters
 
-        res = pd.to_datetime(
-            time,
-            unit=self.timeList_gene["unit"],
-            origin=self.timeList_gene["origin"]
-        )
+    res = pd.to_datetime(
+        time,
+        unit=self.timeList_gene["unit"],
+        origin=self.timeList_gene["origin"]
+    )
 	
 	################time##################
     time = res
