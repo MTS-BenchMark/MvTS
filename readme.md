@@ -171,8 +171,14 @@ def geneTimeList(self):
             origin=self.timeList_gene["origin"]
         )
 	
-    return res 
-	##time
+	################time##################
+    
+    mid = np.array(time.values)
+    res = []
+    for i in range(mid.shape[0]):
+        res.append(str(mid[i]).encode())
+    time = np.stack(res, axis=0)  ### result
+    #### result
 ```
 
 
