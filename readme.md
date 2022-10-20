@@ -172,7 +172,7 @@ def geneTimeList(self):
         )
 	
 	################time##################
-    
+    time = res
     mid = np.array(time.values)
     res = []
     for i in range(mid.shape[0]):
