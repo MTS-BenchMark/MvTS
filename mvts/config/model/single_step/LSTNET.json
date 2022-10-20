@@ -8,9 +8,6 @@
   "normalize": 1,
   "horizon": 3,
   "batch_size": 32,
-  "mask": false,
-  "input_dim": 1,
-  "output_dim": 1,
   "window": 168,
 
   "hidRNN": 100,

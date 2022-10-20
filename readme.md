@@ -145,6 +145,38 @@ def handle_csv(filename, outname):
     # print(time)
 ```
 
+If the **time** information is not available directly for some reason. Then users can  generate one as the following way.
+
+```python
+#parameters
+    "timeList_gene": {
+      "unit": "m",
+      "origin": "2018-01-01",
+      "time_step": 15
+    },
+    "//this is notes for timeList gene" : {
+      "unit": "the time unit. d: daily; h: hour; m: minute; s:second; ms,us, ns...",
+      "origin": "the base-time for gene",
+      "time_step": "the Length of each time hop"
+    }
+        
+def geneTimeList(self):
+    time = []
+    for i in range(self.seq_len): #序列长度
+        time.append(i * self.timeList_gene["time_step"]) #parameters
+
+        res = pd.to_datetime(
+            time,
+            unit=self.timeList_gene["unit"],
+            origin=self.timeList_gene["origin"]
+        )
+	
+    return res 
+	##time
+```
+
+
+
 ### Models
 
 Currently, the models supported by `MvTS` are as follows, and we'll continuously develop new models into it.
