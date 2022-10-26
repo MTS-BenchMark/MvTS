@@ -292,7 +292,7 @@ class Evaluator(AbstractEvaluator):
 
             scores['RMSE']['all'] = rmse_np(output, groud_truth)
             scores['MAPE']['all'] = masked_mape_np(output, groud_truth, null_val=0.0)
-            # scores['PCC']['all'] = node_pcc_np(output, groud_truth)
+            scores['PCC']['all'] = node_pcc_np(output, groud_truth)
             scores['rse']['all'] = rse_np(output, groud_truth)
             scores['rae']['all'] = rae_np(output, groud_truth)
             # scores['MAPE']['all'] = stemgnn_mape(output, groud_truth) * 100.0
