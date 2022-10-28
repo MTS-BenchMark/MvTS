@@ -1,65 +1,62 @@
 {
-    "device": "cuda:0",
-    "gpu": true,
-    "gpu_id": 0,
-    "save": true,
-    "cuda": true,
-  
-    "normalize": 1,
-    "window": 168,
-    "label_len": 12,
-    "horizon": 24,
-    "batch_size": 32,
-    "timeList_gene": {
-      "unit": "m",
-      "origin": "2018-01-01",
-      "time_step": 15
-    },
-    "//this is notes for timeList gene" : {
-      "unit": "the time unit. d: daily; h: hour; m: minute; s:second; ms,us, ns...",
-      "origin": "the base-time for gene",
-      "time_step": "the Length of each time hop"
-    },
-    
-    "output_attention": false,
-    "moving_avg": 25,
-    "enc_in" : 7,
-    "dec_in": 7,
-    "c_out": 7,
-    "d_model": 64,
-    "n_heads": 8,
-    "e_layers": 2, 
-    "d_layers": 1,
-    "d_ff": 256,
-    "attn_factor": 1, 
-    "distil": true,
-    "dropout": 0.05,
-    "embed": "timeF",
-    "freq": "t",
-    "//this is notes for time features encoding" : {
-      "s": "secondly",
-      "t": "minutely",
-      "h": "hourly",
-      "d": "daily",
-      "b": "business days",
-      "w": "weekly",
-      "m": "monthly"
-    },
-    "activation": "gelu",
-    
+  "device": "cuda:0",
+  "gpu": true,
+  "gpu_id": 0,
+  "save": true,
+  "cuda": true,
 
-    "train_loss": "mae",
-    "clip": 10,
-    "epochs": 100,
-    "seed": 54321,
-    "log_interval": 2000,
-    "optim": "adam",
-    "lr": 0.001,
-    "patience": 30,
-    "lr_decay": false,
-    "lr_scheduler": "multisteplr",
-    "lr_decay_ratio": 0.1,
-    "lr_decay_steps": [5, 20, 40, 70],
-    "step_size": 10
-  }
+  "normalize": 1,
+  "window": 168,
+  "label_len": 12,
+  "pred_len": 1,
+  "horizon": 24,
+  "batch_size": 32,
+  "timeList_gene": {
+    "unit": "m",
+    "origin": "2006-01-01",
+    "time_step": 10
+  },
+  "//this is notes for timeList gene" : {
+    "unit": "the time unit. d: daily; h: hour; m: minute; s:second; ms,us, ns...",
+    "origin": "the base-time for gene",
+    "time_step": "the Length of each time hop"
+  },
   
+  "output_attention": true,
+  "moving_avg": 25,
+  "d_model": 32,
+  "n_heads": 4,
+  "e_layers": 2, 
+  "d_layers": 1,
+  "d_ff": 128,
+  "attn_factor": 1, 
+  "distil": true,
+  "dropout": 0.05,
+  "embed": "timeF",
+  "freq": "t",
+  "//this is notes for time features encoding" : {
+    "s": "secondly",
+    "t": "minutely",
+    "h": "hourly",
+    "d": "daily",
+    "b": "business days",
+    "w": "weekly",
+    "m": "monthly"
+  },
+  "activation": "gelu",
+  
+
+  "train_loss": "mae",
+  "clip": 10,
+  "epochs": 100,
+  "seed": 54321,
+  "log_interval": 2000,
+  "optim": "adam",
+  "lr": 0.001,
+  "patience": 50,
+  "lr_decay": false,
+  "lr_scheduler": "multisteplr",
+  "lr_decay_ratio": 0.1,
+  "lr_decay_steps": [5, 20, 40, 70],
+  "step_size": 10
+}

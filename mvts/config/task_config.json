@@ -53,7 +53,7 @@
             "STFGNN", "STGNN", "CCRNN", "GTS", "AGCRN", "STODE", "SAAM",
             "ASTGCN", "FCGAGA", "DeepAR", "GMAN", "Informer", "InformerStack", "MTGNN", "STNorm", "StemGNN",
             "AutoFormer", "ESG"],
-        "allowed_dataset": ["PeMS07", "METR-LA", "PEMS03", "PEMS04", "PEMS08", "LD2011_2014", "PeMS-bay", "ETTh1", "nyc-bike"],
+        "allowed_dataset": ["PeMS07", "METR-LA", "PEMS03", "PEMS04", "PEMS08", "LD2011_2014", "PeMS-bay", "ETTh1", "nyc-bike", "nyc-taxi"],
         "STSGCN": {
             "dataset_class": "STSGCNDataset",
             "executor": "MultiStepExecutor",

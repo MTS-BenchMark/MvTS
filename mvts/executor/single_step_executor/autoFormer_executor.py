@@ -62,7 +62,8 @@ class AutoFormerExecutor(AbstractExecutor):
         self.output_attention = self.config.get("output_attention", False)\
         
         self.label_len = self.config.get("label_len", 48)
-        self.pred_len = self.config.get("horizon", 96)
+        # self.pred_len = self.config.get("horizon", 96)
+        self.pred_len = 1
 
         self.input_dim = self.config.get("input_dim")
         self.output_dim = self.config.get("output_dim")
