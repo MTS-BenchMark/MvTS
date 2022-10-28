@@ -25,9 +25,9 @@ class AutoFormerExecutor(AbstractExecutor):
         self.device = torch.device(_device)
         self.model = model.to(self.device)
 
-        self.cache_dir = './libcity/cache/model_cache'
-        self.evaluate_res_dir = './libcity/cache/evaluate_cache'
-        self.summary_writer_dir = './libcity/log/runs'
+        self.cache_dir = './mvts/cache/model_cache'
+        self.evaluate_res_dir = './mvts/cache/evaluate_cache'
+        self.summary_writer_dir = './mvts/log/runs'
         ensure_dir(self.cache_dir)
         ensure_dir(self.evaluate_res_dir)
         ensure_dir(self.summary_writer_dir)

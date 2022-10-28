@@ -59,9 +59,26 @@ The directory of the main files participating in the process is shown as below.
 
 If you want to extend new datasets into `MvTS`, then you can follow the methods below:
 
-1. Record the rawdata, time, adjacency matrix(*if not available, then set it zero-matrix*) information of the dataset and integrate them in the h5 file. And put it into `./mvts/raw_data/`
+1. Record the rawdata, time, adjacency matrix(*if not available, then set it zero-matrix*) information of the dataset and integrate them in the h5 file. And put it into `./mvts/raw_data/`.
+
 2. Add `newdataset.json` in directory `./mvts/config/data/`.
+
 3. Modify `./mvts/config/task_config.json` to support the new dataset.
+
+   ```Python
+   def convert_to_h5(filename, data, time, adj_mx = None):
+       f = h5py.File(filename, "w")
+       f.create_dataset("raw_data", data = data)
+   	f.create_dataset("time", data = time)
+       if(str(type(adj_mx)) == "<class 'NoneType'>"):
+           adj_mx = np.zeros((data.shape[1], data.shape[1]))
+   
+       print(adj_mx.shape)
+       f.create_dataset("adjacency_matrix", data = adj_mx)
+       
+   ```
+
+   
 
 ### New Models
 
