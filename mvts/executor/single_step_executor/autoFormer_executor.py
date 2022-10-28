@@ -25,9 +25,9 @@ class AutoFormerExecutor(AbstractExecutor):
         self.device = torch.device(_device)
         self.model = model.to(self.device)
 
-        self.cache_dir = './mvts/cache/model_cache'
-        self.evaluate_res_dir = './mvts/cache/evaluate_cache'
-        self.summary_writer_dir = './mvts/log/runs'
+        self.cache_dir = './libcity/cache/model_cache'
+        self.evaluate_res_dir = './libcity/cache/evaluate_cache'
+        self.summary_writer_dir = './libcity/log/runs'
         ensure_dir(self.cache_dir)
         ensure_dir(self.evaluate_res_dir)
         ensure_dir(self.summary_writer_dir)
@@ -62,8 +62,7 @@ class AutoFormerExecutor(AbstractExecutor):
         self.output_attention = self.config.get("output_attention", False)\
         
         self.label_len = self.config.get("label_len", 48)
-        # self.pred_len = self.config.get("horizon", 96)
-        self.pred_len = 1
+        self.pred_len = self.config.get("pred_len", 96)
 
         self.input_dim = self.config.get("input_dim")
         self.output_dim = self.config.get("output_dim")
