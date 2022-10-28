@@ -201,8 +201,7 @@ class DCRNNDataset(AbstractDataset):
         graph_sensor_ids = self.config.get("graph_sensor_ids", "")
         distances_file = self.config.get("distances_file", "")
         train_ratio = self.config.get("train_rate", 0.7)
-        eval_ratio = self.config.get("eval_rate", 0.1)
-        valid_ratio = 1 - train_ratio - eval_ratio
+        valid_ratio = self.config.get("eval_rate", 0.1)
         device_num = self.config.get("device", "cpu")
         device = torch.device(device_num)
         horizon = self.config.get("horizon", 3)

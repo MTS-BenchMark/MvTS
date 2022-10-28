@@ -16,8 +16,8 @@ class MTGNNDataset(AbstractDataset):
         self.config = config
         file_name = self.config.get("filename", " ")
         train = self.config.get("train_rate", 0.6)
-        eval = self.config.get("eval_rate", 0.2)
-        valid = 1 - train - eval
+
+        valid = self.config.get("eval_rate", 0.2)
         device_num = self.config.get("device", "cuda:0")
         device = torch.device(device_num)
         horizon = self.config.get("horizon", 3)
