@@ -5,8 +5,8 @@
 
   "task": "single_step",
 
-  "window_size": 24,
-  "horizon": 7,
+  "window_size": 168,
+  "horizon": 24,
   "epochs": 500,
   "lr": 1e-4,
   "multi_layer": 5,

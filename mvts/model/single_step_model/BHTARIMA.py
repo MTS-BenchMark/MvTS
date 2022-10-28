@@ -266,7 +266,6 @@ class BHTARIMA(object):
         self._d = self.config.get('d')
         self._q = self.config.get('q')
         self._taus = self.config.get('taus')
-        self._taus[0] = self.config.get("num_nodes")
         self._Rs = self.config.get('Rs')
         self._K = self.config.get('K')
         self._tol = self.config.get('tol')
