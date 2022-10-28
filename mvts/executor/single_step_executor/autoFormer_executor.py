@@ -167,10 +167,7 @@ class AutoFormerExecutor(AbstractExecutor):
                 
                 score = self.evaluator.evaluate(predict, self.scaler.inverse_transform(val_y))
 
-                if self.mask:
-                    vloss = score["masked_MAE"]["all"]
-                else:
-                    vloss = score["MAE"]["all"]
+                vloss = score["MAE"]["all"]
                     
                 valid_loss.append(vloss)
             

@@ -25,7 +25,7 @@ class AutoFormerDataset(AbstractDataset):
 
         self.file_name = self.config.get("filename", " ")
         self.adj_filename = self.config.get("adj_filename", "")
-        self.adj_type = self.config.get("adj_type", None)
+        self.adj_type = self.config.get("adj_type", "distance")
 
         self.train_rate = self.config.get("train_rate", 0.6)
         self.valid_rate = self.config.get("eval_rate", 0.2)
