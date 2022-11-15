@@ -100,31 +100,31 @@ The following are the information of datasets supported by `MvTS`. Users can dow
 
 Click [here](https://drive.google.com/drive/folders/1YatrRANAQrHhRYeEd0UhMMiYrAoJlbWE?usp=sharing) to get the original data which is unprocessed.
 
-|   Datasets    | Nodes | TimeSteps | Granularity |  StartTime  |
-| :-----------: | :---: | :-------: | :---------: | :---------: |
-| AirAualityUCI |  12   |   9357    |    1hour    | x03/10/3004 |
-|   covid-19    |  284  |    816    |    1day     | 01/22/2020  |
-|      ECG      |  140  |   5000    |      -      |      -      |
-|  electricity  |  321  |   26304   |    1hour    | 07/01/2016  |
-|     ETTh1     |   7   |   17420   |    1hour    | 07/01/2016  |
-|     ETTh2     |   7   |   17420   |    1hour    | 07/01/2016  |
-|     ETTm1     |   7   |   69680   |    15min    | 07/01/2016  |
-|     ETTm2     |   7   |   69680   |    15min    | 07/01/2016  |
-| exchange-rate |   8   |   7588    |    1day     | 01/01/1990  |
-|    illness    |   7   |    966    |    7day     | 01/01/2002  |
-|    metr-la    |  207  |   34272   |    5min     | 03/01/2012  |
-|   nyc-bike    |  250  |   4368    |    30min    | 04/01/2016  |
-|   nyc-taxi    |  266  |   4368    |    30min    | 04/01/2016  |
-|   pems-bay    |  325  |   52116   |    5min     | 01/01/2017  |
-|    PEMS03     |  358  |   26208   |    5min     | 05/01/2012  |
-|    PEMS04     |  307  |   16992   |    5min     | 07/01/2017  |
-|    PEMS07     |  883  |   28224   |    5min     | 05/01/2017  |
-|    PEMS08     |  170  |   17856   |    5min     | 07/01/2016  |
-|     solar     |  137  |   52560   |    10min    | 01/01/2006  |
-|    traffic    |  862  |   17544   |    1hour    | 07/01/2016  |
-|    weather    |  21   |   52696   |    10min    | 01/01/2020  |
-|      WTH      |  12   |   35064   |    1hour    | 01/01/2010  |
-|     wind      |  28   |   10957   |    1day     | 01/01/1986  |
+|                           Datasets                           | Nodes | TimeSteps | Granularity | StartTime  |
+| :----------------------------------------------------------: | :---: | :-------: | :---------: | :--------: |
+| AirQualityUCI ([link](https://github.com/Gauhar1107/AirQualityUCI)) |  12   |   9357    |    1hour    | 03/10/2004 |
+| covid-19 ([paper](https://doi.org/10.48550/arxiv.2103.07719)) |  284  |    816    |    1day     | 01/22/2020 |
+|   ECG ([paper](https://doi.org/10.48550/arxiv.2103.07719))   |  140  |   5000    |      -      |     -      |
+| electricity ([paper](https://doi.org/10.48550/arxiv.1703.07015)) |  321  |   26304   |    1hour    | 07/01/2016 |
+| ETTh1  ([paper](https://doi.org/10.48550/arxiv.2106.13008))  |   7   |   17420   |    1hour    | 07/01/2016 |
+| ETTh2  ([paper](https://doi.org/10.48550/arxiv.2106.13008))  |   7   |   17420   |    1hour    | 07/01/2016 |
+| ETTm1  ([paper](https://doi.org/10.48550/arxiv.2106.13008))  |   7   |   69680   |    15min    | 07/01/2016 |
+| ETTm2  ([paper](https://doi.org/10.48550/arxiv.2106.13008))  |   7   |   69680   |    15min    | 07/01/2016 |
+| exchange-rate ([paper](https://doi.org/10.48550/arxiv.1703.07015)) |   8   |   7588    |    1day     | 01/01/1990 |
+| illness  ([paper](https://doi.org/10.48550/arxiv.2106.13008)) |   7   |    966    |    7day     | 01/01/2002 |
+| metr-la ([paper](https://doi.org/10.48550/arxiv.1707.01926)) |  207  |   34272   |    5min     | 03/01/2012 |
+| nyc-bike ([paper](https://doi.org/10.48550/arxiv.2206.13816)) |  250  |   4368    |    30min    | 04/01/2016 |
+| nyc-taxi ([paper](https://doi.org/10.48550/arxiv.2206.13816)) |  266  |   4368    |    30min    | 04/01/2016 |
+| pems-bay ([paper](https://doi.org/10.48550/arxiv.1707.01926)) |  325  |   52116   |    5min     | 01/01/2017 |
+|  PEMS03 ([paper](https://doi.org/10.1609/aaai.v34i01.5438))  |  358  |   26208   |    5min     | 05/01/2012 |
+|  PEMS04 ([paper](https://doi.org/10.1609/aaai.v34i01.5438))  |  307  |   16992   |    5min     | 07/01/2017 |
+|  PEMS07 ([paper](https://doi.org/10.1609/aaai.v34i01.5438))  |  883  |   28224   |    5min     | 05/01/2017 |
+|  PEMS08 ([paper](https://doi.org/10.1609/aaai.v34i01.5438))  |  170  |   17856   |    5min     | 07/01/2016 |
+|  solar ([paper](https://doi.org/10.48550/arxiv.1703.07015))  |  137  |   52560   |    10min    | 01/01/2006 |
+| traffic ([paper](https://doi.org/10.48550/arxiv.1703.07015)) |  862  |   17544   |    1hour    | 07/01/2016 |
+| weather  ([paper](https://doi.org/10.48550/arxiv.2106.13008)) |  21   |   52696   |    10min    | 01/01/2020 |
+|       WTH ([paper](https://arxiv.org/abs/2012.07436))        |  12   |   35064   |    1hour    | 01/01/2010 |
+|  wind ([paper](https://doi.org/10.48550/arxiv.2206.13816))   |  28   |   10957   |    1day     | 01/01/1986 |
 
 If you want to develop new dataset into `MvTS`,  you need to organize the new dataset in the same format and store it in h5 file.  Among them, the processing of **time** information can refer to the following method. (To be convenient, we use the common used *csv* file for an example.)
 
