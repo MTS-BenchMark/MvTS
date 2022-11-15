@@ -162,7 +162,7 @@ If the **time** information is not available directly for some reason. Then user
         
 def geneTimeList(self):
     time = []
-    for i in range(self.seq_len): #序列长度
+    for i in range(self.seq_len): 
         time.append(i * self.timeList_gene["time_step"]) #parameters
 
     res = pd.to_datetime(
