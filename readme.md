@@ -1,4 +1,4 @@
-## MvTS : An Open Library For Multivariate Time Series Forecasting.
+## MvTS : An Open Library For Deep Multivariate Time Series Forecasting.
 
 ### Introduction
 
