@@ -1,7 +1,8 @@
 {
     "single_step": {
         "allowed_model": ["LSTNET", "TPA_LSTM", "StemGNN", "DARNN", "AdaRNN", "BHTARIMA", "MTGNN", "AutoFormer", "ESG"],
-        "allowed_dataset": ["electricity", "traffic", "exchange_rate", "solar", "ECG", "PEMS07", "wind", "weather_Dingling", "traffic_40"],
+        "allowed_dataset": ["electricity", "traffic", "exchange_rate", "solar", "ECG", "PEMS07", "wind", "weather_Dingling", 
+            "AirQualityUCI", "ETTh1", "ETTh2", "ETTm1", "ETTm2", "illness", "weather", "WTH", "traffic_40"],
         "LSTNET": {
             "dataset_class": "SingleStepDataset",
             "executor": "SingleStepExecutor",
@@ -53,7 +54,8 @@
             "STFGNN", "STGNN", "CCRNN", "GTS", "AGCRN", "STODE", "SAAM",
             "ASTGCN", "FCGAGA", "DeepAR", "GMAN", "Informer", "InformerStack", "MTGNN", "STNorm", "StemGNN",
             "AutoFormer", "ESG"],
-        "allowed_dataset": ["PeMS07", "METR-LA", "PEMS03", "PEMS04", "PEMS08", "LD2011_2014", "PeMS-bay", "ETTh1", "nyc-bike", "nyc-taxi"],
+        "allowed_dataset": ["PEMS07", "METR-LA", "PEMS03", "PEMS04", "PEMS08", "LD2011_2014", "PeMS-bay", "ETTh1", 
+            "ETTh2", "ETTm1", "ETTm2", "nyc-bike", "nyc-taxi", "ECG"],
         "STSGCN": {
             "dataset_class": "STSGCNDataset",
             "executor": "MultiStepExecutor",
