@@ -241,7 +241,7 @@ We have created a guide to help you understand the workflow of `MvTS` and develo
 
 
 ### Contact
-For any questions, you can contact us via lwm568@buaa.edu.cn 
+For any questions, you are welcome to contact us via lwm568@buaa.edu.cn 
 
 
 
