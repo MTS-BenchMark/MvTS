@@ -4,15 +4,6 @@ import numpy as np
 import torch
 
 
-# def build_sparse_matrix(device, lap):
-#     lap = lap.tocoo()
-#     indices = np.column_stack((lap.row, lap.col))
-#     # this is to ensure row-major ordering to equal torch.sparse.sparse_reorder(L)
-#     indices = indices[np.lexsort((indices[:, 0], indices[:, 1]))]
-#     lap = torch.sparse_coo_tensor(indices.T, lap.data, lap.shape, device=device)
-#     return lap.to(torch.float32)
-
-
 def build_sparse_matrix(device, lap):
     """
     构建稀疏矩阵(tensor)
