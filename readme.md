@@ -2,7 +2,7 @@
 
 ### Introduction
 
-![](figure/structure.png)
+![](figure/mvts_structure.png)
 
 Modeling multivariate time series has been a subject for a long time, which attracts the attention of scholars from many fields including economics, finance, traffic, etc. As the number of models increases, it's significant to design a unified framework to implement and evaluate these models. 
 
