@@ -226,6 +226,16 @@ Currently, the models supported by `MvTS` are as follows, and we'll continuously
 - ST-Norm (Jinliang Deng, 2021) ([paper](https://doi.org/10.1145/3447548.3467330))
 - DeepAR (Salinas, 2017) ([paper](https://arxiv.org/abs/1704.04110))
 
+### Reference List
+In the process of building MvTS, we referred to some classic code libraries to complete the construction of the MvTS framework. We have listed the referenced code libraries below, and we greatly appreciate the help of these code libraries and their designers.
+
+- LibCity ([link](https://github.com/LibCity/Bigscity-LibCity))
+- ETNA ([link](https://github.com/tinkoff-ai/etna))
+- DL-Traff-Graph ([link](https://github.com/deepkashiwa20/DL-Traff-Graph))
+- Tsai ([link](https://github.com/timeseriesAI/tsai))
+- ...
+
+MvTS will continue to learn various excellent code libraries to improve its design. Once again, we would like to thank so many relevant scholars for their help.
 
 
 ### Extensibility
