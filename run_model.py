@@ -1,5 +1,5 @@
 """
-训练并评估单一模型的脚本
+训练并评估单一模型
 """
 
 import argparse
@@ -20,30 +20,45 @@ def add_other_args(parser):
                                 type=str2float, default=None)
 
 
-if __name__ == '__main__':
+def parse_arguments():
     parser = argparse.ArgumentParser()
-    # 增加指定的参数
-    parser.add_argument('--task', type=str,
-                        default='mts', help='the name of task')
-    parser.add_argument('--model', type=str,
-                        default='AGCRN', help='the name of model')
-    parser.add_argument('--dataset', type=str,
-                        default='METR-LA', help='the name of dataset')
-    parser.add_argument('--config_file', type=str,
-                        default=None, help='the file name of config file')
-    parser.add_argument('--saved_model', type=str2bool,
-                        default=True, help='whether save the trained model')
-    parser.add_argument('--train', type=str2bool, default=True,
-                        help='whether re-train model if the model is \
-                             trained before')
-    # 增加其他可选的参数
+    parser.add_argument('--task', type=str, default='multi_step',
+                        help='the name of task, either multi_step or single_step')
+    parser.add_argument('--model', type=str, default='AGCRN',
+                        help='the name of model according to the task')
+    parser.add_argument('--dataset', type=str, default='METR-LA',
+                        help='the name of dataset')
+    parser.add_argument('--config_file', type=str, default=None,
+                        help='the file name of config file')
+    parser.add_argument('--saved_model', type=bool, default=True,
+                        help='whether save the trained model')
+    parser.add_argument('--train', type=bool, default=True,
+                        help='whether re-train model if the model is trained before')
     add_other_args(parser)
-    # 解析参数
-    args = parser.parse_args()
+    return parser.parse_args()
+
+
+def prepare_model_arguments(args):
     dict_args = vars(args)
     other_args = {key: val for key, val in dict_args.items() if key not in [
         'task', 'model', 'dataset', 'config_file', 'saved_model', 'train'] and
         val is not None}
-    run_model(task=args.task, model_name=args.model, dataset_name=args.dataset,
-              config_file=args.config_file, saved_model=args.saved_model,
-              train=args.train, other_args=other_args)
+    
+    model_arguments = {
+        'task': args.task,
+        'model_name': args.model,
+        'dataset_name': args.dataset,
+        'config_file': args.config_file,
+        'saved_model': args.saved_model,
+        'train': args.train,
+        'other_args': other_args
+    }
+
+    return model_arguments
+
+
+if __name__ == '__main__':
+    args = parse_arguments()
+    model_arguments = prepare_model_arguments(args)
+    run_model(**model_arguments)
+
